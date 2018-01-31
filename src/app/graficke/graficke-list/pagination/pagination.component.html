@@ -1,0 +1,5 @@
+<br>
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-primary" *ngIf="activePage>1" (click)="changePage(activePage-1)">&laquo;Prev</button>
+  <button type="button" class="btn btn-primary" *ngIf="activePage<numberOfPages"(click)="changePage(activePage+1)">Next &raquo;</button>
+</div>

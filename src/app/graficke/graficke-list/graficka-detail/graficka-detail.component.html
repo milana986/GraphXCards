@@ -1,0 +1,17 @@
+
+<div class="row border">
+	<div class="col-2">
+		<img src="{{card.image}}">
+	</div>
+	<div class="col-10">
+		<h3><a [routerLink]="[card._id ,'comments']">{{card.title}}</a></h3>
+		<h4><i>{{card.subtitle}}</i></h4>
+		<!-- <p>{{card.description}}</p> -->
+		<g-show-more [description]="card?.description" [length]="130"></g-show-more>
+		<div class="col-2 float">
+			<button class="btn btn-success" (click)="changeGrade('+1')">+</button>
+			{{card.grade}}
+			<button class="btn btn-danger" (click)="changeGrade('-1')">-</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+	<div class="row">
+	<div class="col">
+		<g-comments-form [cardId]="id" (emitComment)="refreshComments()"></g-comments-form>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12" *ngFor="let comment of comments">
+		<g-comments-list [comment]="comment"></g-comments-list>
+	</div>
+</div>
+</div>
